@@ -118,3 +118,7 @@ else:
     print("A két szám valamelyik nulla!")
 
 # HF: bool algebra
+# HF: Kérjen be a felhasználótól 3db számot (lehet tört is). Ez a három szám egy háromszög három oldala
+#1. Derékszögű-e a háromszög?
+#2. Egyenlőszárú-e a háromszög?
+#3. Szabályos-e a háromszög? 
