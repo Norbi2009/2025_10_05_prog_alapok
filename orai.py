@@ -66,6 +66,8 @@ print(mp, "másodperc")
 
 
 
+
+
 # kérjen be egy egész számot és döntse el, hogy páros vagy páratlan
 
 szam1 = int(input("Adjon meg egy egész számot: "))
