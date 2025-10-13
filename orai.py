@@ -124,3 +124,32 @@ else:
 #1. Derékszögű-e a háromszög?
 #2. Egyenlőszárú-e a háromszög?
 #3. Szabályos-e a háromszög? 
+
+szam1 = random.randint(100, 999)
+szam2 = random.randint(100, 999)
+szam3 = random.randint(100, 999)
+
+szamok = [szam1, szam2, szam3]
+
+for i in range(3):
+    if szamok[i] % 13 != 0:
+        print(f"A(z) {szamok[i]} szám nem osztható 13-mal.")
+    else:
+        print(f"A(z) {szamok[i]} szám osztható 13-mal.")
+
+atlag = sum(szamok) / 3
+print("A számok átlaga:", atlag)
+
+szamok.sort()
+print("Sorrendbe állítva:", szamok)
+
+van_4 = False
+for sz in szamok:
+    if sz % 10 == 4:
+        van_4 = True
+        break
+
+if van_4:
+    print("Van köztük 4-re végződő szám.")
+else:
+    print("Nincs köztük 4-re végződő szám.")
