@@ -34,10 +34,22 @@ import random
 
 
 
-# Kérje be a felhasználó keresztnevét! Generáljon neki egy jelszót, az első 3 karakterének ascii kódjának szorzatát! Ha nincs a név 3 jegyű, akkor kettő esetén a hossz érték legyen a szorzat3. tagja 1 esetén pedig a  szám köbe leygyen
+# Kérje be a felhasználó keresztnevét! Generáljon neki egy jelszót, az első 3 karakterének ascii kódjának szorzatát!
+#  Ha nincs a név 3 jegyű, akkor kettő esetén a hossz érték legyen a szorzat3. tagja 1 esetén pedig a  szám köbe leygyen
 # Alma - 65 * 108 * 109
 # Co - 67 * 111 * 2
 #G - 71 * 71 * 71
 
 szoveg = input("Adja meg a keresztnevét: ")
-print(szoveg)
+hossz = len(szoveg)
+
+if hossz >= 3:
+    jelszo = ord(szoveg[0]) * ord(szoveg[1]) * ord(szoveg[2])
+else:
+    if hossz == 2:
+        jelszo = ord(szoveg[0]) * ord(szoveg[1]) * hossz
+    else:
+        jelszo = ord(szoveg[0]) ** 3
+
+print(f"A generált jelszavad: {jelszo}")
+
