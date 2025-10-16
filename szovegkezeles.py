@@ -51,5 +51,17 @@ else:
     else:
         jelszo = ord(szoveg[0]) ** 3
 
+print(fszoveg = input("Adja meg a keresztnevét: ")
+hossz = len(szoveg)
+
+if hossz >= 3:
+    jelszo = ord(szoveg[0]) * ord(szoveg[1]) * ord(szoveg[2])
+else:
+    if hossz == 2:
+        jelszo = ord(szoveg[0]) * ord(szoveg[1]) * hossz
+    else:
+        jelszo = ord(szoveg[0]) ** 3
+
 print(f"A generált jelszavad: {jelszo}")
+"A generált jelszavad: {jelszo}")
 
