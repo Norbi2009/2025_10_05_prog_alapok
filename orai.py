@@ -55,19 +55,6 @@ mp = sec % 60
 print(ora, "óra")
 print(perc, "perc")
 print(mp, "másodperc")
-
-
-
-
-
-
-
-
-
-
-
-
-
 # kérjen be egy egész számot és döntse el, hogy páros vagy páratlan
 
 szam1 = int(input("Adjon meg egy egész számot: "))
