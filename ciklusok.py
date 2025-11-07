@@ -1,3 +1,4 @@
+import random as r
 """
 Ciklusok - ismétlés - loop
 
@@ -75,3 +76,16 @@ print()
 n = len(szoveg)
 for index in range(0, n, 1):
     print(str(index+1)+szoveg[index],end=" ")
+
+
+print()
+
+
+# írasson ki 5db véletlen karaktert a szövegből!
+
+for db in range(0,5,1):
+    szam = r.randint(0,n-1)
+    print(szoveg[szam],end=" ")
+
+# hf 17-21 feladat
+print()
