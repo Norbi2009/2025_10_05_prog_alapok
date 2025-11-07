@@ -66,8 +66,16 @@ print()
 
 # forditva a kalapács kiiratása
 for index in range(len(szoveg)-1, -1, -1):
-    print(szoveg[index],end="")
+    print(szoveg[n-index-1],end="")
+
+ujszoveg = ""
+for index in range(-1, -n-1, -1):
+    ujszoveg += szoveg[index]
+    #print(szoveg[index],end="")
+print(ujszoveg)
+
 print()
+
 
 #irassa ki a szöveget az helyével társítva!
 #BE: kalapács
