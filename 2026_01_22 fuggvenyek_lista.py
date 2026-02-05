@@ -124,3 +124,4 @@ def main():
     print("lista1 terjedelme:",terjedelem(lista1))
 
 main()
+
