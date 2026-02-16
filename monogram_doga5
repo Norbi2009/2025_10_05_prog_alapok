@@ -1,0 +1,74 @@
+import random
+
+def listaFeltoltes(db):
+    lista = []
+    for i in range(0,db,1):
+        lista.append(random.randint(2,36))
+    return lista
+
+def listaOsszeg(lista):
+    osszeg = 0
+    for i in range(0,len(lista), 1):
+        osszeg += lista[i]
+    return osszeg
+
+def listaKiiratas(lista,osszeg):
+    for i in range(0, len(lista)-1, 1):
+        print(lista[i],"+ ", end="")
+    print(lista[len(lista)-1], "=", osszeg)
+    print()
+
+def  nyertesLekerdezese(s,f):
+    if(s>f): 
+        return "Shrek nyert"
+    elif(f>s):
+        return "Fiona nyert"
+    else:
+        return "Döntetlen"
+
+def voltEEgyezes(lista1, lista2):
+    i = 0
+    while(i<len(lista1) and lista1[i] != lista2[i]):
+        i += 1
+    return i<len(lista1)
+
+def minimumumIndex(lista):
+    mini = 0
+    for i in range(0,len(lista),1):
+        if(lista[i]<lista[mini]):
+            mini = i
+    return mini
+
+def pluszpontert(lista1, lista2):
+    smini = minimumumIndex(lista1)
+    fmini = minimumumIndex(lista2)
+    if(lista1[smini]<lista2[fmini]):
+        print(f"{lista1[smini]} volt a legkisebb érték és Shrek dobta ki és a {smini+1}. helyen van") 
+    elif(lista1[smini]>lista2[fmini]):
+        print(f"{lista2[fmini]} volt a legkisebb érték és Fióna dobta ki és a {fmini+1}. helyen van")    
+    else:
+        print(f"{lista1[smini]} volt a legkisebb érték és mindketten kidobták")
+
+def main():
+    shreck = listaFeltoltes(7)
+    fiona = listaFeltoltes(7)
+    osszegShreck = listaOsszeg(shreck)
+    osszegFiona = listaOsszeg(fiona)
+    print("Shrek")
+    listaKiiratas(shreck, osszegShreck)
+    print("Fiona")
+    listaKiiratas(fiona, osszegFiona)
+    nyertes = nyertesLekerdezese(osszegShreck, osszegFiona)
+    print(nyertes)
+    print()
+    egyezes = voltEEgyezes(shreck, fiona)
+    if(egyezes):
+        print("Volt olyan kör, amikor ugyan azt dobták")
+    else:
+        print("Nem volt olyan kör, amikor ugyan azt dobták")
+    print()
+    pluszpontert(shreck, fiona)
+
+
+
+main()

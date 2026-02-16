@@ -69,7 +69,7 @@ def ertek50Index(lista):
         i+=1
     vane = i <len(lista)
     if(vane):
-        return i
+        return ibn 
     else:
         return -1
 
