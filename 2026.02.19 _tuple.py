@@ -54,4 +54,16 @@ def main():
     evjarat = auto[3].split(".")
     print(nev[0], evjarat[0])
 
+    # Hf 
+    # "ABC123 Kis Pista KJ-358638351 1992_03_10"
+    # rendszám utolsó 3 száma
+    # keretsznév
+    # hónap
+
+    #"Nagy Béla:2026_02_19 - 12:13:20"
+    # Nagy Béla az adott napon és időben csekkolt be!
+    # Nap?
+    # óra?
+    # Keresztnév?
+
 main()
