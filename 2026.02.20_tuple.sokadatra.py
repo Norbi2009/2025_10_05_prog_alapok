@@ -22,6 +22,25 @@ def hanyArNagyobb(adatok, ar):
             db += 1
     return db
 
+def maxindexSuly(adatok):
+    maxi = 0
+    for i in range(len(adatok)):
+        if(adatok[i][2]>adatok[maxi][2]):
+            maxi = i
+    return maxi
+
+def gyumolcsKereses(adatok,gyumNev):
+    i = 0
+    while(i<len(adatok) and adatok[i][0] != gyumNev):
+        i += 1
+    vane = i<len(adatok)
+    if(vane):
+        return i
+    else:
+        return -i
+
+
+
 def main():
     adatok = listaFeltoltes()
     print(adatok)
@@ -41,4 +60,14 @@ def main():
     #irjon fuggvenyt ami megadja a legdragabb gyumolcs nevet
     #irjon fuggvenyt ami beker a felhasznalotol egy gyomulcsot es ha van ilyen gyumolcs kiirja az adatait be: szilva  ki: 13q, 300 Ft/kg
     #ha nincs ilyen adat akkor irja ki hogy nincs ilyen adat
+
+    index = maxindexSuly(adatok)
+    print("Legdrágább gyümölcs: ",adatok[index][0])
+
+    gyumNev = input("Adjon meg egy gyümölcsöt: ")
+    keresettIndex = gyumolcsKereses(adatok,gyumNev)
+    if(keresettIndex < 0):
+        print("Nincs ilyen gyümölcs a listaban")
+    else:
+        print(adatok[keresettIndex][1],"q,",adatok[keresettIndex][2], "Ft/kg")
 main()
